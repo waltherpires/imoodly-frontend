@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
-import Image from "next/image";
 
 import HomePageImage from '@/public/images/therapistchair.jpg';
+import ImageComponent from "../ImageComponent";
 
 export default function Hero() {
     return (
@@ -35,19 +35,7 @@ export default function Hero() {
               </Box>
             </Box>
           </Grid>
-
-          <Grid size={{xs: 0, md: 6}}>
-            <Box sx={{
-              maxWidth: "450px",
-              mx: "auto",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              boxShadow: "2px 1px 4px black"
-            }}>
-              <Image src={HomePageImage} alt="Imagem de mulher meditando" layout="responsive" objectFit="cover"/>
-            </Box>
-          </Grid>
+          <ImageComponent image={HomePageImage} altDescription="poltrona em uma sala" />
         </Grid>
       </Box>
     )

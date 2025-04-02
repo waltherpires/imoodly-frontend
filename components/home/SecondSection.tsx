@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, Card, CardContent } from "@mui/material";
-import Image from "next/image";
 
 import Beliefs from "@/public/images/goals.jpg";
+import ImageComponent from "../ImageComponent";
 
 export default function SecondSection() {
   return (
@@ -44,26 +44,7 @@ export default function SecondSection() {
             </Typography>
           </Box>
         </Grid>
-        <Grid size={{ xs: 0, lg: 6 }} order={{ xs: 1, lg: 0 }}>
-          <Box
-            sx={{
-              width: "95%",
-              maxWidth: "450px",
-              mx: { xs: "auto" },
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              boxShadow: "2px 1px 4px black",
-            }}
-          >
-            <Image
-              src={Beliefs}
-              alt="Imagem de mulher meditando"
-              layout="responsive"
-              objectFit="cover"
-            />
-          </Box>
-        </Grid>
+        <ImageComponent image={Beliefs} altDescription="pessoa fazendoa anotações"/>
         <Grid size={{ xs: 12, lg: 6 }}>
           <Grid
             container
