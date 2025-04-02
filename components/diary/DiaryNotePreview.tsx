@@ -8,15 +8,20 @@ interface DiaryNoteInterface extends React.PropsWithChildren {
 }
 
 export default function DiaryNote({children, title, date}: DiaryNoteInterface) {
+    let text = typeof children === "string" ? children : "";
+    
+    if(text.length >  150){
+        text = text.substring(0, 150) + "..."; 
+    }
+
     return (
-        <Card sx={{ width: "100%", height: "100%"}}>
-            <CardActionArea>
-                <CardContent>
+        <Card sx={{ display: "flex", flexDirection: "column", width: "100%", height: "100%"}}>
+                <CardContent sx={{ flex: 1 }}>
                     {title && <Typography variant="h5" component="div">{title}</Typography>}
                     <Typography variant="subtitle2">{date}</Typography>
-                    <Typography variant="body2" sx={{ color: "text.secondary", mt: 2}}>{children}</Typography>
+                    <Typography variant="body2" sx={{ color: "text.secondary", mt: 2, pr: 1, wordBreak: "break-word", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "normal"}}>{text}</Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions sx={{display: "flex", justifyContent: "flex-end"}}>
                     <IconButton aria-label="editar">
                         <EditIcon />
                     </IconButton>
@@ -24,7 +29,6 @@ export default function DiaryNote({children, title, date}: DiaryNoteInterface) {
                         <DeleteOutlineIcon />
                     </IconButton>
                 </CardActions>
-            </CardActionArea>
         </Card>
     )
 }
