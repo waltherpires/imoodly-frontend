@@ -51,7 +51,7 @@ export default function SecondSection() {
                 }}
               >
                 <CardContent>
-                  <Typography variant="body1" fontWeight="bold">
+                  <Typography variant="body1" fontWeight="bold" sx={{ textAlign: "left", textAlignLast: "left", hyphens: "auto", wordBreak: "break-word"}}>
                     No coração do nosso projeto, o Sistema de Diário e Gestão
                     Psicológica nasceu da necessidade de oferecer uma ferramenta
                     acessível e eficaz para o cuidado da saúde mental. Sabemos
@@ -73,7 +73,7 @@ export default function SecondSection() {
                 }}
               >
                 <CardContent>
-                  <Typography variant="body1" fontWeight="bold">
+                  <Typography variant="body1" fontWeight="bold" sx={{ textAlign: "left", textAlignLast: "left", hyphens: "auto", wordBreak: "break-word"}}>
                     Acreditamos que a tecnologia pode ser uma aliada poderosa na
                     promoção do bem-estar. Por isso, desenvolvemos um ambiente
                     intuitivo e seguro, onde cada usuário pode registrar suas
