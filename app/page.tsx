@@ -1,13 +1,15 @@
 
 
 import Hero from "@/components/home/Hero";
-import SecondSection from "@/components/home/SecondSection";
+import OurServices from "@/components/home/OurServices";
+import WhoSection from "@/components/home/WhoSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <SecondSection />
+      <WhoSection />
+      <OurServices />
     </>
   );
 }

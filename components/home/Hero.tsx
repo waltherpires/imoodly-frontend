@@ -1,20 +1,13 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 
+import Section from '@/components/ui/Section';
+
 import HomePageImage from '@/public/images/therapistchair.jpg';
-import ImageComponent from "../ImageComponent";
+import ImageComponent from "../ui/ImageComponent";
 
 export default function Hero() {
     return (
-        <Box
-        component="section"
-        sx={{
-          minHeight: "95vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          px: 4,
-          mt: {xs: 10, md: 20, lg: 5},
-        }}>
+      <Section bgcolor="#f9f9f9">
         <Grid container spacing={{xs: 4, lg: 20}} alignItems="center">
           <Grid size={{ xs: 12, md:6 }}>
             <Box sx={{ maxWidth: "500px", mx: "auto" }}>
@@ -35,8 +28,8 @@ export default function Hero() {
               </Box>
             </Box>
           </Grid>
-          <ImageComponent image={HomePageImage} altDescription="poltrona em uma sala" />
+          <ImageComponent size="md" image={HomePageImage} altDescription="poltrona em uma sala" />
         </Grid>
-      </Box>
+      </Section>
     )
 }

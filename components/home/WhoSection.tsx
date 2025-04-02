@@ -1,26 +1,15 @@
 import { Box, Grid, Typography, Card, CardContent } from "@mui/material";
 
 import Beliefs from "@/public/images/goals.jpg";
-import ImageComponent from "../ImageComponent";
+import ImageComponent from "../ui/ImageComponent";
+import Section from "../ui/Section";
 
 export default function SecondSection() {
   return (
-    <Box
-      component="section"
-      sx={{
-        bgcolor: "secondary.main",
-        minHeight: "95vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        px: 4,
-        py: 2,
-        mt: { xs: 10 },
-      }}
-    >
+    <Section bgcolor="secondary.main">
       <Grid container spacing={{ xs: 2 }} alignItems="center">
         <Grid size={12}>
-          <Box sx={{ p: 4 }}>
+          <Box sx={{ pb: 2}}>
             <Typography
               variant="h3"
               sx={{
@@ -44,8 +33,8 @@ export default function SecondSection() {
             </Typography>
           </Box>
         </Grid>
-        <ImageComponent image={Beliefs} altDescription="pessoa fazendoa anotações"/>
-        <Grid size={{ xs: 12, lg: 6 }}>
+        <ImageComponent size="md" image={Beliefs} altDescription="pessoa fazendoa anotações"/>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Grid
             container
             spacing={2}
@@ -100,6 +89,6 @@ export default function SecondSection() {
           </Grid>
         </Grid>
       </Grid>
-    </Box>
+    </Section>
   );
 }
