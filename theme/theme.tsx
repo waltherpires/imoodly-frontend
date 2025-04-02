@@ -8,9 +8,13 @@ const theme = createTheme({
     palette: {
         primary: {
             main: purple[500],
+            dark: "#9500ae",
+            light: "#dd33fa"
         },
         secondary: {
             main: deepPurple[400],
+            dark: "#4615b2",
+            light: "#834bff",
         },
     },
 })

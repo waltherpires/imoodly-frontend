@@ -9,14 +9,13 @@ export default function Hero() {
         component="section"
         sx={{
           minHeight: "95vh",
-          maxHeight: "1080px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           px: 4,
           mt: {xs: 10, md: 20, lg: 5},
         }}>
-        <Grid container spacing={6} alignItems="center">
+        <Grid container spacing={{xs: 4, lg: 20}} alignItems="center">
           <Grid size={{ xs: 12, md:6 }}>
             <Box sx={{ maxWidth: "500px", mx: "auto" }}>
               <Typography variant="h2">
@@ -43,7 +42,8 @@ export default function Hero() {
               mx: "auto",
               display: "flex",
               justifyContent: "center",
-              alignItems: "center"
+              alignItems: "center",
+              boxShadow: "2px 1px 4px black"
             }}>
               <Image src={HomePageImage} alt="Imagem de mulher meditando" layout="responsive" objectFit="cover"/>
             </Box>
