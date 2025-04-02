@@ -36,7 +36,7 @@ export default function Hero() {
             </Box>
           </Grid>
 
-          <Grid size={{xs: 12, md: 6}}>
+          <Grid size={{xs: 0, md: 6}}>
             <Box sx={{
               maxWidth: "450px",
               mx: "auto",
