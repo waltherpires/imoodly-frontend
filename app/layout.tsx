@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
-import Navbar from "@/components/ui/Navbar";
 import "./global.css";
 import ThemeRegistry from "@/theme/theme";
 
@@ -41,7 +40,6 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider>
           <ThemeRegistry>
-            <Navbar />
             {children}
           </ThemeRegistry>
         </AppRouterCacheProvider>
